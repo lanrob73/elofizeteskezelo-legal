@@ -1,0 +1,385 @@
+<title>Előfizetéskezelő – Adatvédelmi szabályzat / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f5f6f3;
+    --surface: #ffffff;
+    --surface-2: #eef1ec;
+    --text: #1c211f;
+    --text-muted: #5b645f;
+    --border: #dce1db;
+    --accent: #1f6d4c;
+    --accent-soft: #e3f0e8;
+    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121513;
+      --surface: #191d1a;
+      --surface-2: #20251f;
+      --text: #edf1ee;
+      --text-muted: #9aa39d;
+      --border: #2a2f2b;
+      --accent: #55b384;
+      --accent-soft: #1c2a22;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121513;
+    --surface: #191d1a;
+    --surface-2: #20251f;
+    --text: #edf1ee;
+    --text-muted: #9aa39d;
+    --border: #2a2f2b;
+    --accent: #55b384;
+    --accent-soft: #1c2a22;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--mono);
+    font-size: clamp(28px, 4.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .meta span { color: var(--text); }
+
+  .langswitch {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px;
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  .langswitch button {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    padding: 7px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .langswitch button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .lang { display: none; }
+  .lang.active { display: block; }
+
+  section.clause {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 4px 20px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section.clause:last-of-type { border-bottom: none; }
+  .clause-num {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    padding-top: 3px;
+  }
+  .clause h2 {
+    grid-column: 2;
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .clause .clause-num + h2 { grid-column: auto; }
+  .clause p, .clause ul {
+    grid-column: 2;
+    margin: 0 0 10px;
+    color: var(--text);
+    max-width: 60ch;
+  }
+  .clause p:last-child, .clause ul:last-child { margin-bottom: 0; }
+  .clause ul { padding-left: 20px; }
+  .clause li { margin-bottom: 6px; }
+  .clause strong { color: var(--text); }
+  .muted { color: var(--text-muted); }
+
+  .callout {
+    grid-column: 2;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text);
+    margin-top: 4px;
+  }
+  .callout code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+
+  footer.pagefoot {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 520px) {
+    section.clause { grid-template-columns: 1fr; }
+    .clause h2, .clause p, .clause ul, .callout { grid-column: 1; }
+    .clause-num { padding-top: 0; }
+  }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <div>
+      <p class="eyebrow" data-lang-hu="ADATVÉDELMI SZABÁLYZAT" data-lang-en="PRIVACY POLICY">ADATVÉDELMI SZABÁLYZAT</p>
+      <h1>Előfizetéskezelő</h1>
+      <p class="meta">
+        <span data-lang-hu="Kiadó: AllInMarket Studio" data-lang-en="Publisher: AllInMarket Studio">Kiadó: AllInMarket Studio</span>
+        · <span data-lang-hu="Hatályos: 2026. augusztus 8." data-lang-en="Effective: August 8, 2026">Hatályos: 2026. augusztus 8.</span>
+      </p>
+    </div>
+    <div class="langswitch" role="group" aria-label="Language">
+      <button type="button" id="btn-hu" aria-pressed="true">HU</button>
+      <button type="button" id="btn-en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <!-- ==================== HUNGARIAN ==================== -->
+  <div class="lang active" id="lang-hu">
+
+    <section class="clause">
+      <div class="clause-num">01</div>
+      <h2>Kik vagyunk?</h2>
+      <p>Az Előfizetéskezelő alkalmazást az <strong>AllInMarket Studio</strong> készíti és tartja karban. Ez a szabályzat bemutatja, milyen adatokat kezel az app, illetve mit teszünk — és mit nem teszünk — ezekkel az adatokkal.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">02</div>
+      <h2>Amit rögzítesz az appban</h2>
+      <p>Az általad felvitt előfizetés-adatok — például név, kategória, ár, pénznem, dátumok és emlékeztető-beállítások — <strong>kizárólag a telefonodon</strong> tárolódnak, egy helyi fájlban. Nincs saját szerverünk, amelyre ezek az adatok elküldésre kerülnének. Az AllInMarket Studio nem látja, nem tárolja és nem fér hozzá a rögzített előfizetéseidhez.</p>
+      <div class="callout" data-lang-hu-html="1">
+        Az app emellett naponta készít egy <strong>helyi biztonsági mentést</strong> a telefonon. A rendszer beépített <strong>Android Auto Backup</strong> szolgáltatása pedig a saját Google-fiókodhoz kötve, titkosítva mentheti ugyanezeket az adatokat a felhőbe. Ezt a Google kezeli, nem mi.
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">03</div>
+      <h2>Hálózati hozzáférés: devizaárfolyamok</h2>
+      <p>Az app a <strong>Magyar Nemzeti Bank</strong> nyilvánosan elérhető árfolyam-szolgáltatását használja ahhoz, hogy a nem forintalapú előfizetéseidet forintra tudja átszámítani. Ez a lekérdezés kizárólag dátumot és pénznemkódot küld. <strong>Nem tartalmaz személyes vagy azonosító adatot</strong>, és nem köthető hozzád.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">04</div>
+      <h2>Vásárlások — Pro verzió</h2>
+      <p>A Pro verzió éves előfizetését a <strong>Google Play Billing</strong> szolgáltatáson keresztül vásárolhatod meg. A fizetési adataidat — például bankkártyaadatokat és tranzakciós információkat — a Google kezeli a saját adatvédelmi irányelvei szerint. Ezekhez az AllInMarket Studio nem fér hozzá. Az app kizárólag azt az információt kapja meg a Google-tól, hogy a Pro-előfizetésed jelenleg aktív-e.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">05</div>
+      <h2>Engedélyek, amelyeket kérünk</h2>
+      <ul>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">INTERNET</code> — az árfolyam-lekérdezéshez és a Play Billing működéséhez.</li>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">ACCESS_NETWORK_STATE</code> — annak ellenőrzéséhez, hogy van-e hálózati kapcsolat.</li>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">POST_NOTIFICATIONS</code> — a fizetési emlékeztetők megjelenítéséhez.</li>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">RECEIVE_BOOT_COMPLETED</code> — azért, hogy a beütemezett emlékeztetők telefon-újraindítás után is működjenek.</li>
+      </ul>
+      <p class="muted">Egyik engedélyt sem használjuk adatgyűjtésre. Mindegyik kizárólag a fent leírt funkciók működéséhez szükséges.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">06</div>
+      <h2>Amit nem teszünk</h2>
+      <ul>
+        <li>Nincs hirdetés az appban.</li>
+        <li>Nincs analitika, nyomkövetés vagy olyan harmadik féltől származó SDK, amely a viselkedésedet figyelné.</li>
+        <li>Nincs felhasználói fiók vagy regisztráció.</li>
+        <li>Nem adjuk el és nem osztjuk meg az adataidat senkivel.</li>
+      </ul>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">07</div>
+      <h2>Adataid törlése</h2>
+      <p>Az app eltávolítása a telefonról a helyi adatfájlokat is törli. A felhőben tárolt Android Auto Backup-mentést a telefonod Google-fiókhoz kapcsolódó beállításai között tudod kezelni vagy törölni, mivel az a Google rendszerében, nem pedig az AllInMarket Studio rendszerén tárolódik.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">08</div>
+      <h2>Kapcsolat</h2>
+      <p>Kérdés vagy kérés esetén — például az adataid törlésével kapcsolatban — írj nekünk az alábbi e-mail-címre: <a href="mailto:lantosrobi@gmail.com">lantosrobi@gmail.com</a></p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">09</div>
+      <h2>A szabályzat módosításai</h2>
+      <p>Ha ez a szabályzat változik, az új verzió dátuma a lap tetején frissül. Érdemi változás esetén az app <strong>Súgó</strong> menüjében is jelezzük a frissítést.</p>
+    </section>
+
+  </div>
+
+  <!-- ==================== ENGLISH ==================== -->
+  <div class="lang" id="lang-en">
+
+    <section class="clause">
+      <div class="clause-num">01</div>
+      <h2>Who we are</h2>
+      <p>Előfizetéskezelő (Subscription Manager) is developed and maintained by <strong>AllInMarket Studio</strong>. This policy explains what data the app handles, and what we do — and do not do — with that data.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">02</div>
+      <h2>What you enter in the app</h2>
+      <p>The subscription data you enter — such as name, category, price, currency, dates and reminder settings — is stored <strong>only on your phone</strong>, in a local file. We do not operate a server to which this data is sent. AllInMarket Studio cannot see, store or access the subscriptions you record in the app.</p>
+      <div class="callout">
+        The app also creates a <strong>daily local backup</strong> on your phone. In addition, the device's built-in <strong>Android Auto Backup</strong> service may save the same data, encrypted, to the cloud storage linked to your own Google account. This is handled by Google, not by us.
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">03</div>
+      <h2>Network access: currency exchange rates</h2>
+      <p>The app uses the public exchange-rate service of the <strong>National Bank of Hungary</strong> to convert your non-HUF subscriptions into Hungarian forints. This request sends only a date and a currency code. It contains <strong>no personal or identifying information</strong> and cannot be linked back to you.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">04</div>
+      <h2>Purchases — Pro version</h2>
+      <p>The annual Pro subscription can be purchased through <strong>Google Play Billing</strong>. Your payment details — such as card details and transaction information — are handled by Google under its own privacy policy. AllInMarket Studio does not have access to this information. The app only receives information from Google about whether your Pro subscription is currently active.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">05</div>
+      <h2>Permissions we request</h2>
+      <ul>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">INTERNET</code> — for exchange-rate lookups and Google Play Billing.</li>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">ACCESS_NETWORK_STATE</code> — to check whether a network connection is available.</li>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">POST_NOTIFICATIONS</code> — to show payment reminders.</li>
+        <li><code style="font-family: var(--mono); font-size: 12.5px;">RECEIVE_BOOT_COMPLETED</code> — so scheduled reminders continue to work after the phone is restarted.</li>
+      </ul>
+      <p class="muted">None of these permissions are used for data collection. Each permission is required only for the functions described above.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">06</div>
+      <h2>What we do not do</h2>
+      <ul>
+        <li>There are no ads in the app.</li>
+        <li>There is no analytics, tracking or third-party SDK that monitors your behavior.</li>
+        <li>There is no user account or registration.</li>
+        <li>We do not sell or share your data with anyone.</li>
+      </ul>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">07</div>
+      <h2>Deleting your data</h2>
+      <p>Uninstalling the app from your phone also deletes its local data files. The cloud copy stored through Android Auto Backup can be managed or deleted from the Google account settings on your phone, since it is stored in Google's system, not in a system operated by AllInMarket Studio.</p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">08</div>
+      <h2>Contact</h2>
+      <p>For questions or requests — for example, regarding deletion of your data — please contact us at: <a href="mailto:lantosrobi@gmail.com">lantosrobi@gmail.com</a></p>
+    </section>
+
+    <section class="clause">
+      <div class="clause-num">09</div>
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the date of the new version will be updated at the top of the page. In the event of a material change, we will also indicate the update in the app's <strong>Help</strong> menu.</p>
+    </section>
+
+  </div>
+
+  <footer class="pagefoot">
+    <span>AllInMarket Studio</span>
+    <span><span data-lang-hu="hu.allinmarket.elofizetesmanager" data-lang-en="hu.allinmarket.elofizetesmanager">hu.allinmarket.elofizetesmanager</span></span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var btnHu = document.getElementById('btn-hu');
+    var btnEn = document.getElementById('btn-en');
+    var langHu = document.getElementById('lang-hu');
+    var langEn = document.getElementById('lang-en');
+    var swaps = document.querySelectorAll('[data-lang-hu]');
+
+    function setLang(lang) {
+      var isHu = lang === 'hu';
+      langHu.classList.toggle('active', isHu);
+      langEn.classList.toggle('active', !isHu);
+      btnHu.setAttribute('aria-pressed', String(isHu));
+      btnEn.setAttribute('aria-pressed', String(!isHu));
+      swaps.forEach(function (el) {
+        el.textContent = el.getAttribute('data-lang-' + lang);
+      });
+      document.documentElement.setAttribute('lang', lang);
+      try { localStorage.setItem('policy-lang', lang); } catch (e) {}
+    }
+
+    btnHu.addEventListener('click', function () { setLang('hu'); });
+    btnEn.addEventListener('click', function () { setLang('en'); });
+
+    var saved = null;
+    try { saved = localStorage.getItem('policy-lang'); } catch (e) {}
+    if (saved === 'en') setLang('en');
+  })();
+</script>
